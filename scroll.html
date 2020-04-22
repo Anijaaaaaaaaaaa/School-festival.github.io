@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>自分だけの卵を作ろう！</title>
+    <link rel="stylesheet" type="text/css" href="base.css">
+    <link href="slick-theme.css" rel="stylesheet" type="text/css">
+    <link href="slick.css" rel="stylesheet" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="slick.min.js"></script>
+    <script type="text/javascript" language="javascript">
+    window.onload = function() {
+        var r = document.cookie.split(';');
+        var array = [];
+        for (var i = 0;  i < r.length;  i++){
+            var content = r[i].split('=');
+            if (i == 0){array.push(content[0].slice(4));}
+            else {array.push(content[0].slice(5));}}
+        var h = '';
+        h += '<ul class="slider">'
+        for (var i = 0;  i < array.length;  i++){
+          if (array[i]){h += '<li><a href="#"><img src="./egg/'+array[i]+'.png" alt="aaa"></a></li>'}}
+        h += '</ul>'
+        document.getElementById('memo').innerHTML = h ;
+        $('.slider').slick({
+            autoplay:true,
+            dots:true,
+            fade: true,
+            pauseOnFocus:false,
+            pauseOnHover:false
+        });
+        setTimeout("location.reload()",600000);
+      }
+    </script>
+    <style>
+    h1 {text-align:center;margin:0 auto;font-size:75px;font-family: Arial, sans-serif;font-weight:bold;padding: 30px 0;}
+    .slider{
+        margin: -50px auto;
+        width: 80%;
+    }
+    .slider img{
+      text-align: center;
+      margin:0 auto;
+        height: 900;
+        width: 1200px;
+        background-color: white;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>プログラミングたまごを作るミニコーナー</h1>
+    <div id="memo"></div></body>
+</html>
