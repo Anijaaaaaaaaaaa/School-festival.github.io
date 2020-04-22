@@ -1,0 +1,463 @@
+@charset "utf-8";
+
+.key {
+  box-shadow: 0 2px 0px 2px rgba(255, 255, 255, 0.7), 0 2px 0px 1px rgba(0, 0, 0, 0.25);
+  background: #f6f6f6;
+  display: block;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #888;
+  border-radius: 50px;
+  font-size: 30px;
+  color: #444;
+  text-decoration: none;
+  text-align: center;
+  line-height: 150%;
+  letter-spacing: 0;
+  height: 40px; }
+  .key:hover {
+    background: #DDDDDD; }
+.key:after{
+  padding-top: 150%;
+}
+.key1 {
+  width: 70px;
+}
+.key2 {
+  width: 70px;
+}
+
+body {
+  font-family: "Squada One",'Hiragino Kaku Gothic Pro', Meiryo, 'MS PGothic', sans-serif;
+  background: #000e12;
+  color: #daf6ff;
+  background-image: url(./images/tenor.gif);
+  background-size: cover;
+}
+
+.peint {
+  display: table;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 80%;
+  top: 64%;
+  transform: translate(-50%, -50%);
+}
+.peint a {
+  display: table-cell;
+  font-size: 3em;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 50%;
+  transition: background 1s, border-width 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), text-shadow 0.5s;
+  color: #daf6ff;
+  text-shadow: 0 0 20px #0aafe6, 0 0 20px rgba(10, 175, 230, 0);
+  box-shadow: 0 0 0 rgba(10, 175, 230, 0), inset 0 0 0 rgba(10, 175, 230, 0);
+  background-image: radial-gradient(center, ellipse cover, rgba(10, 175, 230, 0) 0%, rgba(10, 175, 230, 0) 90%);
+  border: 0 dotted rgba(10, 175, 230, 0);
+}
+.peint a:hover {
+  color: #fff;
+  text-shadow: 0 0 50px #0aafe6, 0 0 50px #0aafe6;
+  background-image: radial-gradient(center, ellipse cover, rgba(10, 175, 230, 0.3) 0%, rgba(10, 175, 230, 0) 60%);
+}
+.peint:before, .peint:after, .peint a:before, .peint a:after {
+  transition: 0.2s ease-in-out;
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  border: 60px dashed transparent;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.peint:before {
+  animation: rotate 20s linear 0s infinite;
+  width: 180%;
+  height: 180%;
+  border: 3px dotted rgba(10, 175, 230, 0);
+  z-index: -1;
+}
+.peint:after {
+  animation: rotate 10s linear 0s infinite reverse;
+  border: 80px dashed rgba(10, 175, 230, 0);
+  width: 160%;
+  height: 160%;
+  z-index: -2;
+}
+.peint a:before {
+  animation: rotate 5s ease-in-out 0s infinite alternate;
+  width: 120%;
+  height: 120%;
+  border: 50px dashed rgba(10, 175, 230, 0);
+}
+.peint a:after {
+  animation: rotate 5s linear 0s infinite;
+  border: 18px dashed rgba(10, 175, 230, 0);
+  width: 120%;
+  height: 120%;
+}
+.peint:hover:before {
+  border-color: rgba(10, 175, 230, 0.3);
+}
+.peint:hover:after {
+  border-color: rgba(10, 175, 230, 0.1);
+}
+.peint:hover a:before {
+  border-color: rgba(10, 175, 230, 0.3);
+}
+.peint:hover a:after {
+  border-color: rgba(10, 175, 230, 0.3);
+}
+
+.lastlight {
+  display: table;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  top: 61%;
+  transform: translate(-50%, -50%);
+}
+.lastlight a {
+  display: table-cell;
+  font-size: 3em;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 50%;
+  transition: background 1s, border-width 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), text-shadow 0.5s;
+  color: #daf6ff;
+  text-shadow: 0 0 20px #0aafe6, 0 0 20px rgba(10, 175, 230, 0);
+  box-shadow: 0 0 0 rgba(10, 175, 230, 0), inset 0 0 0 rgba(10, 175, 230, 0);
+  background-image: radial-gradient(center, ellipse cover, rgba(10, 175, 230, 0) 0%, rgba(10, 175, 230, 0) 90%);
+  border: 0 dotted rgba(10, 175, 230, 0);
+}
+.lastlight a:hover {
+  color: #fff;
+  text-shadow: 0 0 50px #0aafe6, 0 0 50px #0aafe6;
+  background-image: radial-gradient(center, ellipse cover, rgba(10, 175, 230, 0.3) 0%, rgba(10, 175, 230, 0) 60%);
+}
+.lastlight:before, .lastlight:after, .lastlight a:before, .lastlight a:after {
+  transition: 0.2s ease-in-out;
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  border: 60px dashed transparent;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.lastlight:before {
+  animation: rotate 20s linear 0s infinite;
+  width: 180%;
+  height: 180%;
+  border: 3px dotted rgba(10, 175, 230, 0);
+  z-index: -1;
+}
+.lastlight:after {
+  animation: rotate 10s linear 0s infinite reverse;
+  border: 80px dashed rgba(10, 175, 230, 0);
+  width: 160%;
+  height: 160%;
+  z-index: -2;
+}
+.lastlight a:before {
+  animation: rotate 5s ease-in-out 0s infinite alternate;
+  width: 120%;
+  height: 120%;
+  border: 50px dashed rgba(10, 175, 230, 0);
+}
+.lastlight a:after {
+  animation: rotate 5s linear 0s infinite;
+  border: 18px dashed rgba(10, 175, 230, 0);
+  width: 120%;
+  height: 120%;
+}
+.lastlight:hover:before {
+  border-color: rgba(10, 175, 230, 0.3);
+}
+.lastlight:hover:after {
+  border-color: rgba(10, 175, 230, 0.1);
+}
+.lastlight:hover a:before {
+  border-color: rgba(10, 175, 230, 0.3);
+}
+.lastlight:hover a:after {
+  border-color: rgba(10, 175, 230, 0.3);
+}
+
+
+.loginlight {
+  display: table;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 77%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.loginlight a {
+  display: table-cell;
+  font-size: 3em;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 50%;
+  transition: background 1s, border-width 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), text-shadow 0.5s;
+  color: #daf6ff;
+  text-shadow: 0 0 20px #0aafe6, 0 0 20px rgba(10, 175, 230, 0);
+  box-shadow: 0 0 0 rgba(10, 175, 230, 0), inset 0 0 0 rgba(10, 175, 230, 0);
+  background-image: radial-gradient(center, ellipse cover, rgba(10, 175, 230, 0) 0%, rgba(10, 175, 230, 0) 90%);
+  border: 0 dotted rgba(10, 175, 230, 0);
+}
+.loginlight a:hover {
+  color: #fff;
+  text-shadow: 0 0 50px #0aafe6, 0 0 50px #0aafe6;
+  background-image: radial-gradient(center, ellipse cover, rgba(10, 175, 230, 0.3) 0%, rgba(10, 175, 230, 0) 60%);
+}
+.loginlight:before, .loginlight:after, .loginlight a:before, .loginlight a:after {
+  transition: 0.2s ease-in-out;
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  border: 60px dashed transparent;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.loginlight:before {
+  animation: rotate 20s linear 0s infinite;
+  width: 180%;
+  height: 180%;
+  border: 3px dotted rgba(10, 175, 230, 0);
+  z-index: -1;
+}
+.loginlight:after {
+  animation: rotate 10s linear 0s infinite reverse;
+  border: 80px dashed rgba(10, 175, 230, 0);
+  width: 160%;
+  height: 160%;
+  z-index: -2;
+}
+.loginlight a:before {
+  animation: rotate 5s ease-in-out 0s infinite alternate;
+  width: 120%;
+  height: 120%;
+  border: 50px dashed rgba(10, 175, 230, 0);
+}
+.loginlight a:after {
+  animation: rotate 5s linear 0s infinite;
+  border: 18px dashed rgba(10, 175, 230, 0);
+  width: 120%;
+  height: 120%;
+}
+.loginlight:hover:before {
+  border-color: rgba(10, 175, 230, 0.3);
+}
+.loginlight:hover:after {
+  border-color: rgba(10, 175, 230, 0.1);
+}
+.loginlight:hover a:before {
+  border-color: rgba(10, 175, 230, 0.3);
+}
+.loginlight:hover a:after {
+  border-color: rgba(10, 175, 230, 0.3);
+}
+
+.redlight {
+  display: table;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 70%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.redlight a {
+  display: table-cell;
+  font-size: 3em;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 50%;
+  transition: background 1s, border-width 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), text-shadow 0.5s;
+  color: #daf6ff;
+  text-shadow: 0 0 20px #0aafe6, 0 0 20px rgba(10, 175, 230, 0);
+  box-shadow: 0 0 0 rgba(10, 175, 230, 0), inset 0 0 0 rgba(10, 175, 230, 0);
+  background-image: radial-gradient(center, ellipse cover, rgba(10, 175, 230, 0) 0%, rgba(10, 175, 230, 0) 90%);
+  border: 0 dotted rgba(10, 175, 230, 0);
+}
+.redlight a:hover {
+  color: #fff;
+  text-shadow: 0 0 50px #0aafe6, 0 0 50px #0aafe6;
+  background-image: radial-gradient(center, ellipse cover, rgba(10, 175, 230, 0.3) 0%, rgba(10, 175, 230, 0) 60%);
+}
+.redlight:before, .redlight:after, .redlight a:before, .redlight a:after {
+  transition: 0.2s ease-in-out;
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  border: 60px dashed transparent;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.redlight:before {
+  animation: rotate 20s linear 0s infinite;
+  width: 180%;
+  height: 180%;
+  border: 3px dotted rgba(10, 175, 230, 0);
+  z-index: -1;
+}
+.redlight:after {
+  animation: rotate 10s linear 0s infinite reverse;
+  border: 80px dashed rgba(10, 175, 230, 0);
+  width: 160%;
+  height: 160%;
+  z-index: -2;
+}
+.redlight a:before {
+  animation: rotate 5s ease-in-out 0s infinite alternate;
+  width: 120%;
+  height: 120%;
+  border: 50px dashed rgba(10, 175, 230, 0);
+}
+.redlight a:after {
+  animation: rotate 5s linear 0s infinite;
+  border: 18px dashed rgba(10, 175, 230, 0);
+  width: 120%;
+  height: 120%;
+}
+.redlight:hover:before {
+  border-color: rgba(10, 175, 230, 0.3);
+}
+.redlight:hover:after {
+  border-color: rgba(10, 175, 230, 0.1);
+}
+.redlight:hover a:before {
+  border-color: rgba(10, 175, 230, 0.3);
+}
+.redlight:hover a:after {
+  border-color: rgba(10, 175, 230, 0.3);
+}
+
+.bluelight {
+  display: table;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 30%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.bluelight a {
+  display: table-cell;
+  font-size: 3em;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 50%;
+  transition: background 1s, border-width 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), text-shadow 0.5s;
+  color: #daf6ff;
+  text-shadow: 0 0 20px #0aafe6, 0 0 20px rgba(10, 175, 230, 0);
+  box-shadow: 0 0 0 rgba(10, 175, 230, 0), inset 0 0 0 rgba(10, 175, 230, 0);
+  background-image: radial-gradient(center, ellipse cover, rgba(10, 175, 230, 0) 0%, rgba(10, 175, 230, 0) 90%);
+  border: 0 dotted rgba(10, 175, 230, 0);
+}
+.bluelight a:hover {
+  color: #fff;
+  text-shadow: 0 0 50px #0aafe6, 0 0 50px #0aafe6;
+  background-image: radial-gradient(center, ellipse cover, rgba(10, 175, 230, 0.3) 0%, rgba(10, 175, 230, 0) 60%);
+}
+.bluelight:before, .bluelight:after, .bluelight a:before, .bluelight a:after {
+  transition: 0.2s ease-in-out;
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  border: 60px dashed transparent;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.bluelight:before {
+  animation: rotate 20s linear 0s infinite;
+  width: 180%;
+  height: 180%;
+  border: 3px dotted rgba(10, 175, 230, 0);
+  z-index: -1;
+}
+.bluelight:after {
+  animation: rotate 10s linear 0s infinite reverse;
+  border: 80px dashed rgba(10, 175, 230, 0);
+  width: 160%;
+  height: 160%;
+  z-index: -2;
+}
+.bluelight a:before {
+  animation: rotate 5s ease-in-out 0s infinite alternate;
+  width: 120%;
+  height: 120%;
+  border: 50px dashed rgba(10, 175, 230, 0);
+}
+.bluelight a:after {
+  animation: rotate 5s linear 0s infinite;
+  border: 18px dashed rgba(10, 175, 230, 0);
+  width: 120%;
+  height: 120%;
+}
+.bluelight:hover:before {
+  border-color: rgba(10, 175, 230, 0.3);
+}
+.bluelight:hover:after {
+  border-color: rgba(10, 175, 230, 0.1);
+}
+.bluelight:hover a:before {
+  border-color: rgba(10, 175, 230, 0.3);
+}
+.bluelight:hover a:after {
+  border-color: rgba(10, 175, 230, 0.3);
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+p.caption {
+  font-size: 0.7em;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  letter-spacing: 0.2em;
+  text-shadow: 0 0 20px #0aafe6, 0 0 20px rgba(10, 175, 230, 0);
+}
+
+.bg-slider {
+	width: 100vw;
+	height: 100vh;
+	background-position:center center;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.bg-slider__title{
+	color: #fff;
+	font-size: 48px;
+	line-height: 1.5;
+	font-weight: bold;
+	text-align:center;
+	text-shadow: 1px 1px 1px #000;
+}

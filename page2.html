@@ -1,0 +1,226 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>自分だけの卵を作ろう！</title>
+    <link rel="stylesheet" type="text/css" href="base.css">
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="./javascript/jquery.selection.js"></script>
+    <script src="./javascript/jquery.shizukey.js"></script>
+    <script src="./javascript/keyboard.js"></script>
+    <script type="text/javascript" language="javascript">
+
+      function onButtonClick(idname) {
+        var name= document.getElementById(idname).value
+        if (name) {
+          if (document.cookie.indexOf(name) !== -1){alert("その名前は既に使われています！");return;}
+          if (3 <= name.length && name.length<= 10) {
+            var array = ['penis','sex','69','sixtynine','anaru','homo','reipu','manko','manco',
+            'fera','kunni','kuni','cunni','cuni','sukatoro','fuck','omeko','kawaturumi','vagina',
+            'bagina','4545','810','931','114514','459','1919','kuchukuchu','masterbation','hiv','eizu',
+            'imarachio','hibakusha','keroido','dattiwaihu','gaizi','kichigai','chikushou','kuronnbo',
+            'iannhu','reipu','paipann','aokann','yakuza','gaiji','hide','kimoi','sine','kuso','kusai',
+            'korosu','korose','shine','cuso','corosu','yajyuu','yaju','hide','boyslove','girlslove']
+            for (var i = 0;  i < array.length;  i++){if (name.toUpperCase().indexOf(array[i].toUpperCase()) !== -1){alert("その名前はいけません！");return;}}
+            if(name.toUpperCase().indexOf("HBK") !== -1){alert("ブヒブヒぃいいいいいいいいいいいいいいいいいいい！！！");return;}
+
+            var target = confirm("お名前は『"+ name + "』でよろしいですか？\n\n名前はなるべく簡単ではなく、\n自分だけがわかるような名前にしましょう！！");
+            if( target ) {
+              var jikan= new Date();
+              var hour = jikan.getHours();
+              var minute = jikan.getMinutes();
+              var second = jikan.getSeconds();
+              var time = (hour+1)*3600 + minute*60 + second;
+              var setCookieData2 = "";
+              setCookieData2 += "name"+ name + "=" + time;
+              document.cookie = setCookieData2;
+              location.href = "page4.html?name="+encodeURIComponent(name);
+              return false;}
+            else {location.href = "page2.html" ;}}
+          else {alert("名前は3文字以上、10文字以下にしてください!!")}}
+        else {alert("名前を記入して下さい！")}
+      }
+    </script>
+    <style>
+      h1 {text-align:center;margin:0 auto;font-size:100px;font-family: Arial, sans-serif;font-weight:bold;position: absolute;width: 100%;padding: 30px 0;}
+    </style>
+  </head>
+
+  <body>
+    <h1>名前を決めよう！</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <form name="form1" action="">
+      <input type="textfield" id="textfield" value="" style="width:855px;height:70px;font-size:170%;border-radius: 50px;margin-left: 200px;ime-mode: auto;" placeholder="卵に付けるニックネームを記入して下さい！"><br>
+      <table class="table-keyboard" id="lowercase" style="margin-left: 200px;">
+        <thead>
+          <tr>
+            <td colspan="7">&nbsp;</td>
+            <td><a href="#" class="key key1" onclick="move_position(-1);">←</a></td>
+            <td><a href="#" class="key key1" onclick="move_position(1);">→</a></td>
+            <td colspan="2"><a href="#" class="key" onclick="delete_string();">削除</a></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>&nbsp;</td>
+            <td><a href="#" class="key key1" onclick="put_string('a');">a</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('b');">b</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('c');">c</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('d');">d</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('e');">e</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('f');">f</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('g');">g</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('h');">h</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('i');">i</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('j');">j</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td><a href="#" class="key key1" onclick="put_string('k');">k</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('l');">l</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('m');">m</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('n');">n</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('o');">o</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('p');">p</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('q');">q</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('r');">r</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('s');">s</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('t');">t</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td><a href="#" class="key key1" onclick="put_string('u');">u</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('v');">v</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('w');">w</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('x');">x</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('y');">y</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('z');">z</a></td>
+          </tr>
+          <tr>
+            <td><a href="#" class="key key2" onclick="put_string(' ');">空白</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('0');">0</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('1');">1</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('2');">2</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('3');">3</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('4');">4</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('5');">5</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('6');">6</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('7');">7</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('8');">8</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('9');">9</a></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td><a href="#" class="key key2" onclick="switch_uppercase();">ABC</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('@');">@</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('.');">.</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('-');">-</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('_');">_</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('/');">/</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('?');">?</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('+');">+</a></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table-keyboard" id="uppercase" style="margin-left: 200px;">
+        <thead>
+          <tr>
+            <td colspan="7">&nbsp;</td>
+            <td><a href="#" class="key key1" onclick="move_position(-1);">←</a></td>
+            <td><a href="#" class="key key1" onclick="move_position(1);">→</a></td>
+            <td colspan="2"><a href="#" class="key" onclick="delete_string();">削除</a></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>&nbsp;</td>
+            <td><a href="#" class="key key1" onclick="put_string('A');">A</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('B');">B</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('C');">C</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('D');">D</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('E');">E</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('F');">F</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('G');">G</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('H');">H</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('I');">I</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('J');">J</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td><a href="#" class="key key1" onclick="put_string('K');">K</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('L');">L</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('M');">M</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('N');">N</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('O');">O</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('P');">P</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('Q');">Q</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('R');">R</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('S');">S</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('T');">T</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td><a href="#" class="key key1" onclick="put_string('U');">U</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('V');">V</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('W');">W</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('X');">X</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('Y');">Y</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('Z');">Z</a></td>
+          </tr>
+          <tr>
+            <td><a href="#" class="key key2" onclick="put_string(' ');">空白</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('0');">0</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('1');">1</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('2');">2</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('3');">3</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('4');">4</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('5');">5</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('6');">6</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('7');">7</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('8');">8</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('9');">9</a></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td><a href="#" class="key key2" onclick="switch_lowercase();">abc</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('@');">@</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('.');">.</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('-');">-</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('_');">_</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('/');">/</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('?');">?</a></td>
+            <td><a href="#" class="key key1" onclick="put_string('+');">+</a></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+    <div class="loginlight"><a href="#" onclick="onButtonClick('textfield');">次へ</a></div>
+  </body>
+</html>

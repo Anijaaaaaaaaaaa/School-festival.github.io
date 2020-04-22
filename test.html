@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>自分だけの卵を作ろう！</title>
+    <link rel="stylesheet" type="text/css" href="base.css">
+    <script>
+      window.onload = function() {
+        var memo = document.getElementById('memo');
+        var pram=location.search;value = pram.split('=');
+        memo.textContent = "" + decodeURIComponent(value[1]) +'さんの卵を孵化させよう!';
+        var images = document.getElementById('image');
+        var pram=location.search;value = pram.split('=');
+        images.src = "./egg/" + decodeURIComponent(value[1]) +".png";}
+    </script>
+    <style>
+    h1 {text-align:center;font-size:100px;font-family: Arial, sans-serif;font-weight:bold;position: absolute;top:10%;width: 100%;margin:0 auto;}
+    #egg{width: 640px;text-align: center;margin: 0 auto;margin-top: 20%;display:block;}
+    #egg li{width: 640px;height:480px;background-color: white;display: block;float:left;}
+    #egg li span{cursor:pointer;display:block;margin-top: -15.5%;-moz-transform-origin: 50% 80% !important;-webkit-transform-origin: 50% 80% !important;-ms-transform-origin: 50% 80% !important;-o-transform-origin:50% 80% !important;transform-origin: 50% 80% !important;}
+    #egg li div.clicked span{cursor: default;}
+    #egg li div:before{content: url(./images/img_click.png);position: relative;bottom: 100px;left: 0px;opacity:0.9;}
+    #egg li:after{width: 640px;height:640px;position: relative;margin: 0 auto;margin-top: -20%;left: 0px;z-index: -1;}
+    </style>
+  </head>
+<body>
+<h1 id=memo></h1>
+<ul id="egg" class="clearfix">
+<li><div class="clicking" id="logo" ><span class="swing1"><img id ="image" width="640px" height="480px" alt=""></span></div></li>
+</ul>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="javascript/jQueryRotate.js"></script>
+<script type="text/javascript">
+$(function() {
+  var arrayIndex = Math.floor(Math.random() * 70);
+  $('#logo').attr('rel', "./finish/"+ arrayIndex+".png");
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function () {
+  var swing1 = ".swing1";
+	var anime1_00 = function (){ $(swing1).rotate({duration:1000, animateTo: 0.1, callback: anime1_01 });}
+	var anime1_01 = function (){$(swing1).rotate({duration:150,animateTo: 10,callback: anime1_02});}　
+	var anime1_02 = function (){$(swing1).rotate({duration:150,animateTo: -10,callback: anime1_03});}　
+	var anime1_03 = function (){$(swing1).rotate({duration:150,animateTo: 10,callback: anime1_04});}　
+	var anime1_04 = function (){$(swing1).rotate({duration:150,animateTo: -10,callback: anime1_05});}
+	var anime1_05 = function (){$(swing1).rotate({duration:150,animateTo: 0,callback: anime1_00});}
+	anime1_00();
+});
+
+$('#egg li div.clicking').one({
+    'click touchstart':function(){　//卵をクリック
+    	  $("span",this).rotate({　 //動作中の傾きをリセット
+				duration:0,
+        animateTo:0,
+      });
+	  $("span",this).removeClass();
+   　 $(this).removeClass("clicking");　//クリック後のクラスの付け方
+   	  $(this).addClass("clicked");
+		var ImgSrc = $(this).attr("rel");　//割れた画像への差し替え
+		$("img",this).attr({src:ImgSrc});
+		$("img",this).stop().hide();
+		$("img",this).stop().fadeIn(2000);
+    setTimeout(function() {
+      var pram=location.search;value = pram.split('=');
+      var setCookieData2 = "";
+      setCookieData2 += "name"+ decodeURIComponent(value[1]) + "=finished";
+      document.cookie = setCookieData2;
+      alert(""+decodeURIComponent(value[1])+"さんの卵が孵化したよ！！\nこの卵を迎えに来てくれてありがとね！！！\n\nまた遊びに来てね！！\n何回でも遊んでもいいからね！！！");location.href = "page6.html"}, 5000);
+		return false;}
+});
+</script>
+
+
+</body>
+</html>
